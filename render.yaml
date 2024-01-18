@@ -1,6 +1,6 @@
 databases:
   - name: musicApp
-    databaseName: musicApp
+    databaseName: musicapp(copy)
     user: kd
     plan: free
 
