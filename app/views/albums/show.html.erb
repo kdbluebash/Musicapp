@@ -1,45 +1,37 @@
 
 
 <div class="container-fluid show d-flex ">
-<p style="color: red"><%= notice %></p>
-<%= render @album %>
-<div>
-<br>
+        <p style="color: red"><%= notice %></p>
+        <%= render @album %>
+ <div>
+     <br>
 
-<% if @album.profile_image.present? %>
-  <%= image_tag @album.profile_image, width: 250, height: 300, resize_to_fill: [100, 100] %>
-<% else %>
-  <!-- Provide a default image or a placeholder if the profile_image is not present -->
-  <%= image_tag '', width: 250, height: 300, resize_to_fill: [100, 100] %>
-<% end %>
+       <% if @album.profile_image.present? %>
+       <%= image_tag @album.profile_image, width: 250, height: 300, resize_to_fill: [100, 100] %>
+       <% else %>
+       <!-- Provide a default image or a placeholder if the profile_image is not present -->
+       <%= image_tag '', width: 250, height: 300, resize_to_fill: [100, 100] %>
+       <% end %>
 
-<br>
-<br>
-
-
-<%= audio_tag @album.audio, controls: true %>
-<br>
-<div class ="mt-3" style="">
-<h2>Your Albums</h2>
-<% current_user.albums.each do |album| %>
-  <p><%= link_to album.title, album_path(album) %></p>
-<% end %>
-</div>
-</div>
+         <br>
+         <br>
+         <%= audio_tag @album.audio, controls: true %>
+         <br>
+    <div class ="mt-3" style="">
+       <h2>Your Albums</h2>
+       <% current_user.albums.each do |album| %>
+       <p><%= link_to album.title, album_path(album) %></p>
+       <% end %>
+    </div>
+ </div>
 </div>
 
 <div style="margin-left:330px;">
-
   <%= link_to "Edit this album", edit_album_path(@album) %> 
-  
   <br>
-<br>
-
+  <br>
   <%= button_to "Destroy this album", @album, method: :delete,class:"btn btn-danger" %>
-
-
-
-  </div>
+ </div>
 
   
 
