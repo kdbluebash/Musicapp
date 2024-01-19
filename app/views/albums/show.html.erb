@@ -7,14 +7,14 @@
         </div>
  <div>
      <br>
-
+       <div style="margin-left:100px">
        <% if @album.profile_image.present? %>
        <%= image_tag @album.profile_image, width: 250, height: 300, resize_to_fill: [100, 100] %>
        <% else %>
        <!-- Provide a default image or a placeholder if the profile_image is not present -->
        <%= image_tag '', width: 250, height: 300, resize_to_fill: [100, 100] %>
        <% end %>
-
+       </div>   
          <br>
          <br>
 
