@@ -18,7 +18,7 @@
          <br>
         <% if @album.audios.attached? %>
         <% @album.audios.each do |audio| %>
-        <%= audio_tag @album.audio, controls: true %>
+        <%= audio_tag rails_blob_path(audio, disposition: "attachment"), controls: true %>
           <% end %>
         <% else %>
         <p>No audio files attached.</p>
