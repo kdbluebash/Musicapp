@@ -1,39 +1,41 @@
-
-<div class="container-fluid" >
-<br>
-<div  class= "" autocomplete="off" id="search-form" style="margin-left:900px;">
-<%= render 'albums/search_form' %>
-</div>
-
-
-<div class="row ">
-    <h4 id="al" class=" mt-4 mb-4 display-5 text-center  "style=" background-color:white;margin-left:-20px;color:rgb(30, 215 ,96)">Albums</h4>
+<div class="container-fluid">
+  <br />
+  <div class="" autocomplete="off" id="search-form" style="margin-left: 900px">
+    <%= render 'albums/search_form' %>
   </div>
-  
-  
-  <div id = "card" class="container-fluid bg-white" >
-    <div class="row">
-    
-      <% @albums.each do |album| %>
-        
-        <div class="col-md-3 col-sm-12  mb-4">
-        
-          <div class="card m-2" style=" height:180px; border:none; ">
-          
-          
-              <div class="card1">
+  <div class="row">
+    <h4
+      id="al"
+      class="mt-4 mb-4 display-5 text-center"
+      style="
+        background-color: white;
+        margin-left: -20px;
+        color: rgb(30, 215, 96);
+      "
+    >
+      Albums
+    </h4>
+  </div>
 
-              <%= image_tag 'carousel2.jpg', class: 'card-img-top img-fluid', style: 'max-height: 350px;width:200px' %>
-              <h5 class="card-title text-center mt-4" style="text-decoration:none; margin-left:-200px"><%= link_to album.title, album %></h5>
-              
-            </div>
+  <div id="card" class="container-fluid bg-white">
+    <div class="row">
+      <% @albums.each do |album| %>
+
+      <div class="col-md-3 col-sm-12 mb-4">
+        <div class="card m-2" style="height: 180px; border: none">
+          <div class="card1">
+            <%= image_tag 'carousel2.jpg', class: 'card-img-top img-fluid',
+            style: 'max-height: 350px;width:200px' %>
+            <h5
+              class="card-title text-center mt-4"
+              style="text-decoration: none; margin-left: -200px"
+            >
+              <%= link_to album.title, album %>
+            </h5>
           </div>
         </div>
+      </div>
       <% end %>
     </div>
   </div>
 </div>
-
-
-
-
