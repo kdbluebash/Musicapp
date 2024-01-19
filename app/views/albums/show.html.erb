@@ -16,11 +16,8 @@
          <br>
          <br>git 
 
-       <% if @album.audios.attached? %>
-       <% @album.audios.each do |audio| %>
-       <%= audio_tag rails_blob_path(audio, disposition: "attachment"), controls: true %>
-       <% end %>
-       <% else %>
+       
+      <%= audio_tag @album.audio, controls: true %>
       <p>No audio files attached.</p>
       <% end %>
 
